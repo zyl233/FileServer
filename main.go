@@ -11,7 +11,7 @@ func main() {
 
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(200, "index.html", gin.H{
-			"mes": "6666",
+			"mes": "2333",
 		})
 	})
 
