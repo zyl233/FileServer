@@ -2,9 +2,13 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"log"
+	"os"
 )
 
 func main() {
+	dbconn := os.Getenv("DATABASE_URL")
+	log.Println(dbconn)
 	gin.SetMode(gin.DebugMode)
 	r := gin.New()
 	r.LoadHTMLGlob("./tmp/*")
