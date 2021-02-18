@@ -8,7 +8,9 @@ import (
 
 func main() {
 	dbconn := os.Getenv("DATABASE_URL")
-	log.Println(dbconn)
+	getenv := os.Getenv("PORT")
+	log.Println("port" + getenv)
+	log.Println("psot" + dbconn)
 	gin.SetMode(gin.DebugMode)
 	r := gin.New()
 	r.LoadHTMLGlob("./tmp/*")
